@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bogardus Family Message Board</title>
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+</head>
+<body>
+
+    <div class="container mt-4">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+</body>
+    {% bootstrap_javascript %}
+</html>
