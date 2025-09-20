@@ -3,9 +3,10 @@ from django.shortcuts import render, redirect
 from .forms import MessageForm
 from .models import Message
 from django.views.generic import ListView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
-class MessageView(ListView):
+class MessageView(LoginRequiredMixin, ListView):
     model = Message
     template_name = "message_board/message_list.html"
     context_object_name = "messages"

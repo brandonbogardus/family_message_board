@@ -13,4 +13,4 @@ class Message(models.Model):
         verbose_name_plural = "entries"
 
     def __str__(self):
-        return f"{self.message[:50]}..."
+        return f"{self.message[:50]}"
