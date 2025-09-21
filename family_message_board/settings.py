@@ -27,8 +27,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY', get_random_secret_key)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['*']
-
+# specifies which host/domain names your site can serve
+# when empty, it only allows requests from localhost (127.0.0.1)
+ALLOWED_HOSTS = [
+    "bogardus-family-mb.up.railway.app",
+    "127.0.0.1",  # optional for local dev
+    "localhost",  # optional for local dev
+]
 
 # Application definition
 
@@ -141,3 +146,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_URL = "/users/login/"
 LOGOUT_REDIRECT_URL = "/users/login/"
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://bogardus-family-mb.up.railway.app",
+]
