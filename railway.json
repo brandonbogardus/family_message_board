@@ -1,0 +1,8 @@
+{
+  "build": {
+    "commands": [
+      "python manage.py migrate",
+      "echo \"from django.contrib.auth.models import User; User.objects.create_superuser('brandonbogardus', 'brandonbogardus@gmail.com', 'C0mmutebybik3')\" | python manage.py shell"
+    ]
+  }
+}
